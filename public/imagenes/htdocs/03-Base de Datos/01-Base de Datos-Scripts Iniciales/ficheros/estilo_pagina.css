@@ -1,0 +1,188 @@
+/* TECNOLOGÍA CSS3 */
+/*************************** MONITOR  GRANDE ***********************************/
+/*************************** MONITOR  GRANDE ***********************************/
+/*************************** MONITOR  GRANDE ***********************************/
+/*************************** MONITOR  GRANDE ***********************************/
+*
+{
+	box-sizing: border-box;
+}
+
+body
+  {
+	  display: flex;
+	  flex-direction: column;
+	  margin: 0;
+	  min-height: 100vh;
+	  
+	  /*max-width: 80vw;*/
+	  max-width: 1300px;
+	  margin: auto;
+}
+
+header
+{
+	border: solid 0px red;
+}
+
+.BarraNavegar
+{
+	display: flex;
+	flex:1;
+	background-color: DodgerBlue;
+	/* márgenes interiores de la barra de navegación */
+	padding: 10px;
+	font-family: calibri;
+	font-size: 20px;
+	color: white;	
+	
+	border: solid 1px DodgerBlue;
+}
+
+#cabecera
+{
+	display:flex;
+	align-items: end;
+	border: solid 0px yellow;
+}
+
+.contenedor
+{
+	display: flex;
+	border: solid 1px blue;
+	flex: 1;
+	justify-content: center;
+}
+
+.contenedor2
+{
+	display: flex;
+	flex-direction: column;
+	/* horizontal */
+	justify-content: start;
+	/* vertical */
+	align-items: start;
+	margin:10px 5px 10px 10px;
+	border: solid 1px red;
+	border-radius: 8px;
+	/* ancho fijo */
+	width:285px;
+}
+
+.contenedor3
+{
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+	/* vertical */
+	justify-content: start;
+
+	margin:10px 10px 10px 5px;
+	border: solid 1px blue;
+	border-radius: 8px;
+}
+
+ .milabel
+{
+	font-size: 20px;
+	font-family:Calibri;
+	color:navy;
+	margin: 6px 0px 0px 10px;
+	border: solid 0px red;
+	cursor:pointer;
+}
+
+.secciones
+{
+	display: none;
+	width:100%;
+	padding: 5px;
+	border: solid 0px blue;
+}
+
+.videos
+{
+	margin:auto;
+	margin-top:10px;
+	border: solid 1px black;
+	width:800px;
+}
+
+
+.footer
+{
+	display: flex;
+	background-color: DodgerBlue;
+	height: 75px;
+	/* eje vertical - y */
+	align-items: center;
+	/* eje horizontal - x */
+	justify-content: center;	
+	color: white;
+	font-size: 18px;
+	font-family: calibri;
+	
+	border: solid 1px DodgerBlue;;
+}
+
+.L1
+{
+	font-size: 22px;
+	font-family:Calibri;
+	color:white;
+	padding-left: 10px;
+	padding-right: 0px;
+}
+
+.L2
+{
+	font-size: 22px;
+	font-family:Calibri;
+	color:Yellow;
+	margin-left: 10px;
+	margin-right: 20px;
+}
+
+.L3
+{
+	font-size: 20px;
+	font-family:Calibri;
+	color:blue;
+	margin: 0px 0px 0px 10px;
+	border: solid 0px red;
+}
+
+.L4
+{
+	font-size: 20px;
+	font-family:Calibri;
+	color:brown;
+	margin: 10px 0px 0px 10px;
+	border: solid 0px blue;
+}
+
+a
+{
+	text-decoration: none;
+}
+
+a:hover
+{
+	color:blue;
+}
+/**************************** TAMAÑO TABLET ************************************/
+/**************************** TAMAÑO TABLET ************************************/
+/**************************** TAMAÑO TABLET ************************************/
+/**************************** TAMAÑO TABLET ************************************/
+@media (max-width: 1000px)
+{
+}
+
+
+/**************************** TAMAÑO MÓVIL ************************************/
+/**************************** TAMAÑO MÓVIL ************************************/
+/**************************** TAMAÑO MÓVIL ************************************/
+/**************************** TAMAÑO MÓVIL ************************************/
+@media only screen and (max-width: 768px)
+{
+}

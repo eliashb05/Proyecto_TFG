@@ -1,0 +1,186 @@
+<html>
+
+<head>
+<title>Juego Parejas</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+
+<!-- ******************************************************************** -->
+<!-- ******************************************************************** -->
+<script languaje="JavaScript">
+
+var i;
+var auximagen;
+var auxposicion;
+var reloj;
+var seguir=true;
+var imagenes=new Array();
+var posiciones=new Array();
+var npulsaciones=0;
+
+var nimagen1=0;
+var nimagen2=0;
+var imagen1=0;
+var imagen2=0;
+
+var audio = new Audio('sonido.mp3');
+
+//************************************************************************
+//************************************************************************
+function inicio()
+{
+
+
+}
+//************************************************************************
+//************************************************************************
+// quita todas las imágenes de las 16 casillas y las reemplaza por 'smile'
+function quitoimagenes1()
+{
+
+}
+//************************************************************************
+//************************************************************************
+// quita sólo 2 imágenes y las reemplaza por 'smile'
+function quitoimagenes2(imagen1,imagen2)
+{
+
+}
+//************************************************************************
+//************************************************************************
+function finpartida()
+{
+
+}
+//************************************************************************
+//************************************************************************
+// función que se ejecuta cuando hago click sobre una imagen
+function pulso(objeto)
+{
+
+}
+//************************************************************************
+//************************************************************************
+// asocio a las imágenes todos los eventos
+function asocioeventos()
+{
+document.getElementById('IMAGEN1').onclick = function () {pulso(1)};
+document.getElementById('IMAGEN2').onclick = function () {pulso(2)};
+document.getElementById('IMAGEN3').onclick = function () {pulso(3)};
+document.getElementById('IMAGEN4').onclick = function () {pulso(4)};
+document.getElementById('IMAGEN5').onclick = function () {pulso(5)};
+document.getElementById('IMAGEN6').onclick = function () {pulso(6)};
+document.getElementById('IMAGEN7').onclick = function () {pulso(7)};
+document.getElementById('IMAGEN8').onclick = function () {pulso(8)};
+document.getElementById('IMAGEN9').onclick = function () {pulso(9)};
+document.getElementById('IMAGEN10').onclick = function () {pulso(10)};
+document.getElementById('IMAGEN11').onclick = function () {pulso(11)};
+document.getElementById('IMAGEN12').onclick = function () {pulso(12)};
+document.getElementById('IMAGEN13').onclick = function () {pulso(13)};
+document.getElementById('IMAGEN14').onclick = function () {pulso(14)};
+document.getElementById('IMAGEN15').onclick = function () {pulso(15)};
+document.getElementById('IMAGEN16').onclick = function () {pulso(16)};
+}
+//************************************************************************
+//************************************************************************
+// asocio a una imagen dada un evento
+function asocioevento(n)
+{
+document.getElementById('IMAGEN'+n).onclick = function () {pulso(n)};
+}
+</script>
+<!-- ******************************************************************** -->
+<!-- ******************************************************************** -->
+
+<body>
+
+<div id="cuadrado"
+		style="border:2px solid #04B404;width:700px;height:670px;position:absolute;
+		            top:50%;margin-top:-335px;left:50%;margin-left:-350px">
+
+				<center>		
+				<br>
+				<img id="LOGO" name="LOGO" height='98' width='550' src="logo.jpg"
+				style="">					
+				</center>			
+					
+				<center>			
+				<br>
+				<img id="IMAGEN1" name="IMAGEN1" height='100' width='100' src="smile.jpg" border=1 
+				style="cursor:pointer;"
+				onclick="pulso(1)">
+				<img id="IMAGEN2" name="IMAGEN2" height='100' width='100' src="smile.jpg" border=1 
+				style="cursor:pointer;"
+				onclick="pulso(2)">
+				<img id="IMAGEN3" name="IMAGEN3" height='100' width='100' src="smile.jpg" border=1 
+				style="cursor:pointer;"
+				onclick="pulso(3)">
+				<img id="IMAGEN4" name="IMAGEN4" height='100' width='100' src="smile.jpg" border=1 
+				style="cursor:pointer;"
+				onclick="pulso(4)">
+				</center>	
+
+				
+				<center>	
+				<img id="IMAGEN5" name="IMAGEN5" height='100' width='100' src="smile.jpg" border=1 
+				style="cursor:pointer;"
+				onclick="pulso(5)">
+				<img id="IMAGEN6" name="IMAGEN6" height='100' width='100' src="smile.jpg" border=1 
+				style="cursor:pointer;"
+				onclick="pulso(6)">
+				<img id="IMAGEN7" name="IMAGEN7" height='100' width='100' src="smile.jpg" border=1 
+				style="cursor:pointer;"
+				onclick="pulso(7)">				
+				<img id="IMAGEN8" name="IMAGEN8" height='100' width='100' src="smile.jpg" border=1 
+				style="cursor:pointer;"
+				onclick="pulso(8)">
+				</center>	
+				
+				
+				<center>	
+				<img id="IMAGEN9" name="IMAGEN5" height='100' width='100' src="smile.jpg" border=1 
+				style="cursor:pointer;"
+				onclick="pulso(9)">				
+				<img id="IMAGEN10" name="IMAGEN6" height='100' width='100' src="smile.jpg" border=1 
+				style="cursor:pointer;"
+				onclick="pulso(10)">
+				<img id="IMAGEN11" name="IMAGEN7" height='100' width='100' src="smile.jpg" border=1 
+				style="cursor:pointer;"
+				onclick="pulso(11)">				
+				<img id="IMAGEN12" name="IMAGEN8" height='100' width='100' src="smile.jpg" border=1 
+				style="cursor:pointer;"
+				onclick="pulso(12)">
+				</center>	
+
+				
+				<center>	
+				<img id="IMAGEN13" name="IMAGEN5" height='100' width='100' src="smile.jpg" border=1 
+				style="cursor:pointer;"
+				onclick="pulso(13)">				
+				<img id="IMAGEN14" name="IMAGEN6" height='100' width='100' src="smile.jpg" border=1 
+				style="cursor:pointer;"
+				onclick="pulso(14)">
+				<img id="IMAGEN15" name="IMAGEN7" height='100' width='100' src="smile.jpg" border=1 
+				style="cursor:pointer;"
+				onclick="pulso(15)">
+				<img id="IMAGEN16" name="IMAGEN8" height='100' width='100' src="smile.jpg" border=1 
+				style="cursor:pointer;"
+				onclick="pulso(16)">
+				</center>	
+				<br>
+				
+				<div id="botones" style = "position:absolute;left:140px;border:0px solid blue;height: 60px; width: 420px;">
+				<input type="button" id="B1" name="B1" value="  Jugar  " 			style="cursor:pointer;width:150px; height:60;" onClick="inicio()">
+				<input type="button" id="B2" name="B2" value="  Fin Partida  " style="cursor:pointer;width:150px; height:60;" onClick="finpartida()" disabled="true">
+				
+				<input type="text" id="acertados" value="0" readonly="readonly" 
+				style="border:2px solid red;position:absolute;left:355px;width:64px;height:60px;text-align:center;
+				font-size:50px;color:blue; font-family:Calibri;font-weight:bold">				
+			</div>
+</div>
+
+</body>
+</html>
+
+
+

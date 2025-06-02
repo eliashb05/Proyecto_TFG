@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+		<meta http-equiv="Cache-Control" content="no-store">
+		
+		<meta name="description" content="Proyecto AutoFormación Base Datos-PHP">
+		<meta name="author" content="Jorge López">
+
+		<link rel="shortcut icon" href="imagenes/icon.png"/>
+
+		<title>Servidor BD</title>
+
+		<!-- biblioteca de "iconos" -->
+		<link href="ficheros/all.css" rel="stylesheet">
+
+		<!-- estilo de "menú" -->
+		<link href="ficheros/estilo_pagina.css" rel="stylesheet">
+
+		<!-- librería jQuery -->
+		<!-- librería que utilizo para utilizar tecnología ASÍNCRONA -> AJAX -->
+		<script src="ficheros/jquery-3.3.1.js"></script>		
+</head>
+
+
+<script type="text/javascript">
+// variables globales
+var visible_ahora="Seccion01";
+var opcion_resaltada="o1";
+
+//*****************************************************************
+//*****************************************************************
+function inicio()
+{
+	document.getElementById('Seccion01').style.display='flex';	
+	document.getElementById('Seccion01').style.flexDirection='column';	
+	
+	// primera opción resaltada
+	document.getElementById('o1').style.color="brown";
+}
+//*****************************************************************
+//*****************************************************************
+function visible(seccion)
+{
+	document.getElementById(visible_ahora).style.display='none';	
+	document.getElementById('v'+visible_ahora).currentTime = 0;
+	document.getElementById('v'+visible_ahora).pause();
+	
+	document.getElementById(seccion).style.display='flex';	
+	document.getElementById(seccion).style.flexDirection='column';	
+	visible_ahora=seccion;
+}
+//*****************************************************************
+//*****************************************************************
+//  click
+function resalto(opcion)
+{
+	if (opcion!=opcion_resaltada)
+	{
+		document.getElementById(opcion).style.color="brown";
+		document.getElementById(opcion_resaltada).style.color= "navy";
+		opcion_resaltada=opcion;
+	}
+}
+
+// onmouseover
+// no cambiará color si el cursor del ratón pasa por encima de una opción que actualmente está seleccionada
+function resalto2(opcion)
+{
+	if (opcion!=opcion_resaltada)
+	{
+		document.getElementById(opcion).style.color="blue";
+	}
+}
+
+// onmouseout
+// no cambiará color si el cursor del ratón abandona una opción que actualmente está seleccionada
+function resalto3(opcion)
+{
+	if (opcion!=opcion_resaltada)
+	{
+		document.getElementById(opcion).style.color="navy";
+	}
+}
+</script>
+
+<body id="body" onload="inicio();">
+<!-- **************************** CABECERA ************************************************ -->
+<!-- **************************** CABECERA ************************************************ -->
+
+<header>
+
+<div class="BarraNavegar">
+		<!-- Imagen de la barra -->
+		<div id="cabecera">
+				<i class="fas fa-users fa-2x"></i>
+				<label  class="L1">Servidor 2ºDAW&nbsp </label>		
+				<label  class="L2"><b>01-Script´s PHP básicos de operaciones con Base de Datos</b> (MySQL)</label>		
+		</div>
+</div>
+
+</header>
+<!-- **************************** CUERPO ************************************************ -->
+<!-- **************************** CUERPO ************************************************ -->
+<div id="contenedor" class="contenedor">
+
+		<div id="izquierda" class="contenedor2">
+				<label  id="o1" class="milabel"
+				onclick="visible('Seccion01');resalto('o1');"
+				onmouseover="resalto2('o1');"
+				onmouseout="resalto3('o1');"><b>01</b> Conexión a Esquema MySQL</label>		
+				
+				<label  id="o2" class="milabel"
+				onclick="visible('Seccion02');resalto('o2');"
+				onmouseover="resalto2('o2');"
+				onmouseout="resalto3('o2');"><b>02</b> Alta de registro</label>	
+				
+				<label  id="o3" class="milabel"
+				onclick="visible('Seccion03');resalto('o3');"
+				onmouseover="resalto2('o3');"
+				onmouseout="resalto3('o3');"><b>03</b> Baja de registro</label>	
+
+				<label  id="o4" class="milabel"
+				onclick="visible('Seccion04');resalto('o4');"
+				onmouseover="resalto2('o4');"
+				onmouseout="resalto3('o4');"><b>04</b> Modificación de registro</label>	
+
+				<label  id="o5" class="milabel"
+				onclick="visible('Seccion05');resalto('o5');"
+				onmouseover="resalto2('o5');"
+				onmouseout="resalto3('o5');"><b>05</b> Consulta de registro</label>				
+
+				<label  id="o6" class="milabel"
+				onclick="visible('Seccion06');resalto('o6');"
+				onmouseover="resalto2('o6');"
+				onmouseout="resalto3('o6');"><b>06</b> Listado de registros</label><br>			
+
+				<label  id="o7" class="milabel"
+				onclick="visible('Seccion07');resalto('o7');"
+				onmouseover="resalto2('o7');"
+				onmouseout="resalto3('o7');"><b>07</b> <a href="materiales/actividad.pdf"  target="_blank">Actividad</a></label>		
+		</div>
+
+		<div id="derecha" class="contenedor3">
+
+						<!--------------------------------------------------------------------------------------------------------------------->
+						<!--------------------------------------------------------------------------------------------------------------------->
+							
+						<div id="Seccion01" class="secciones">
+								<label  class="L3" ><b>01</b> Conexión a Esquema MySQL</label>
+								<label  class="L4" >o Importa el script <b>basedatos_01.sql</b> en MySQL</label>
+								<label  class="L4" >o Visualiza el siguiente vídeo:</label>	
+
+								<video  id="vSeccion01" class="videos" controls>
+								<source src="videos\01-Conexión_Inicial.mp4" type="video/mp4" >
+								<p>Tu navegador no admite este vídeo</p>
+								</video>
+
+								<label  class="L4" >o Realiza el <b><font color='blue' size='4'>apartado_01</b></font> de la <b>actividad</b></label>	
+								<br><br>
+						</div>			
+
+						<!--------------------------------------------------------------------------------------------------------------------->
+						<!--------------------------------------------------------------------------------------------------------------------->
+							
+						<div id="Seccion02" class="secciones">
+								<label  class="L3" ><b>02</b> Alta de Registro</label>
+								<label  class="L4" >o Visualiza el siguiente vídeo:</label>	
+
+								<video  id="vSeccion02" class="videos" controls>
+								<source src="videos\02-Alta_de_Registro.mp4" type="video/mp4" >
+								<p>Tu navegador no admite este vídeo</p>
+								</video>
+
+								<label  class="L4" >o Realiza el <b><font color='blue' size='4'>apartado_02</b></font> de la <b>actividad</b></label>	
+								<br><br>
+						</div>	
+						
+						<!--------------------------------------------------------------------------------------------------------------------->
+						<!--------------------------------------------------------------------------------------------------------------------->
+						
+						<div id="Seccion03" class="secciones">
+								<label  class="L3" ><b>03</b> Baja de Registro</label>
+								<label  class="L4" >o Visualiza el siguiente vídeo:</label>	
+
+								<video  id="vSeccion03" class="videos" controls>
+								<source src="videos\03-Baja_de_Registro.mp4" type="video/mp4" >
+								<p>Tu navegador no admite este vídeo</p>
+								</video>
+
+								<label  class="L4" >o Realiza el <b><font color='blue' size='4'>apartado_03</b></font> de la <b>actividad</b></label>	
+								<br><br>
+						</div>	
+						
+						<!--------------------------------------------------------------------------------------------------------------------->
+						<!--------------------------------------------------------------------------------------------------------------------->
+						
+						<div id="Seccion04" class="secciones">
+								<label  class="L3" ><b>04</b> Modificación de Registro</label>
+								<label  class="L4" >o Visualiza el siguiente vídeo:</label>	
+
+								<video  id="vSeccion04" class="videos" controls>
+								<source src="videos\04-Modificación_de_Registro.mp4" type="video/mp4" >
+								<p>Tu navegador no admite este vídeo</p>
+								</video>
+
+								<label  class="L4" >o Realiza el <b><font color='blue' size='4'>apartado_04</b></font> de la <b>actividad</b></label>	
+								<br><br>
+						</div>	
+
+						<!--------------------------------------------------------------------------------------------------------------------->
+						<!--------------------------------------------------------------------------------------------------------------------->
+						
+						<div id="Seccion05" class="secciones">
+								<label  class="L3" ><b>05</b> Consulta de Registro</label>
+								<label  class="L4" >o Visualiza el siguiente vídeo:</label>	
+
+								<video  id="vSeccion05" class="videos" controls>
+								<source src="videos\05-Consulta_de_Registro.mp4" type="video/mp4" >
+								<p>Tu navegador no admite este vídeo</p>
+								</video>
+
+								<label  class="L4" >o Realiza el <b><font color='blue' size='4'>apartado_05</b></font> de la <b>actividad</b></label>	
+								<br><br>
+						</div>
+
+						<!--------------------------------------------------------------------------------------------------------------------->
+						<!--------------------------------------------------------------------------------------------------------------------->
+						
+						<div id="Seccion06" class="secciones">
+								<label  class="L3" ><b>06</b> Listado de Registros</label>
+								<label  class="L4" >o Visualiza el siguiente vídeo:</label>	
+
+								<video  id="vSeccion06" class="videos" controls>
+								<source src="videos\06-Listado_de_Registros.mp4" type="video/mp4" >
+								<p>Tu navegador no admite este vídeo</p>
+								</video>
+
+								<label  class="L4" >o Realiza el <b><font color='blue' size='4'>apartado_06</b></font> de la <b>actividad</b></label>	
+								<br><br>
+						</div>					
+
+						<!--------------------------------------------------------------------------------------------------------------------->
+						<!--------------------------------------------------------------------------------------------------------------------->
+		</div>
+</div>
+<!-- **************************** FOOTER ************************************************ -->
+<!-- **************************** FOOTER ************************************************ -->
+<footer class="footer">
+		<img  id="estrella" src="imagenes/estrella.gif"  height="40" width="40" style="visibility:hidden;"/>
+		&nbsp&nbsp<i class="fab fa-php fa-3x" ></i>
+		<label>&nbsp de PHP al Cielo ©2025</label>	
+</footer>
+
+</body>
+</html>

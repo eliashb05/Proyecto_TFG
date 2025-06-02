@@ -1,0 +1,174 @@
+/*************************** MONITOR  GRANDE ***********************************/
+/*************************** MONITOR  GRANDE ***********************************/
+/*************************** MONITOR  GRANDE ***********************************/
+/*************************** MONITOR  GRANDE ***********************************/
+*
+{
+	box-sizing:border-box;
+}
+
+body
+{
+	  display: flex;
+	  flex-direction: column;
+	  margin: 0;
+	  min-height: 100vh;
+	  border: solid 0.5px navy;
+}
+
+.contenedor1
+{
+	display: flex;
+	flex: 1;
+	flex-basis:50%;
+	padding:10px;
+	gap:10px;
+}
+
+.contenedor2
+{
+	display: flex;
+	flex-direction: column;	
+	flex-grow: 1;
+	flex-basis:50%;
+	
+	padding:10px;
+	
+	border: solid 2px blue;
+	justify-content: center;
+	align-items: center;
+	
+	border-radius:8px;
+}
+
+.contenedor2b
+{
+	display: flex;
+	flex-direction: column;	
+	flex-grow: 1;
+	flex-basis:50%;
+	
+	padding:10px 10px;
+	
+	
+	border: solid 2px blue;
+	justify-content: center;
+	align-items: center;
+	
+	border-radius:8px;
+}
+
+.contenedor3
+{
+	display:flex;
+	flex-direction:column;
+	border: solid 1px orange;
+	font-family: sans-serif;
+	
+	justify-content:center;
+	align-items:start;
+	
+	padding:15px 15px 15px 15px;
+	margin-bottom:5px;	
+
+	border-radius:8px;
+}
+
+.contenedor3b
+{
+	display:flex;
+	flex-direction:column;
+	flex-grow: 1;
+	
+	padding:10px 10px 10px 10px;
+	
+	width:100%;
+	border: solid 2px orange;
+	font-family: sans-serif;
+	
+	max-height:55vh;
+	
+	justify-content:start;
+	align-items:center;
+	
+	overflow-y: scroll;
+	border-radius:8px;
+}
+
+.contenedor4
+{
+	display:flex;
+	width:100%;
+	border: solid 1px brown;
+	border-radius:8px;
+	align-items:center;
+	justify-content:center;
+	margin-top:10px;
+	padding:10px;
+	gap:10px;
+	
+	font-family: sans-serif;
+}
+
+.label1
+{
+	border: solid 1px blue;
+	width:195px;
+	height:30px;
+	font-family: sans-serif;	
+	color:blue;
+	margin-left:105px;
+	padding:5px;
+	margin-top:0px;
+	margin-bottom:5px;
+}
+
+footer
+{
+	display: flex;
+	background-color: DodgerBlue;
+	height: 60px;
+	align-items: center;
+	justify-content: center;	
+	color: white;
+	font-size: 16px;
+	font-family: sans-serif;
+}
+/**************************** TAMAÑO TABLET ************************************/
+/**************************** TAMAÑO TABLET ************************************/
+/**************************** TAMAÑO TABLET ************************************/
+/**************************** TAMAÑO TABLET ************************************/
+@media (max-width: 1000px)
+{
+
+}
+/**************************** TAMAÑO MÓVIL ************************************/
+/**************************** TAMAÑO MÓVIL ************************************/
+/**************************** TAMAÑO MÓVIL ************************************/
+/**************************** TAMAÑO MÓVIL ************************************/
+@media only screen and (max-width: 780px)
+{
+	.contenedor1
+	{
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.contenedor2
+	{
+		width:100%;
+	}	
+	.contenedor3b
+	{
+		height:40vh;
+	}	
+	.label1
+	{
+		margin-left:12px;
+	}
+
+	#info1
+	{
+		margin-top:5px;
+	}
+}

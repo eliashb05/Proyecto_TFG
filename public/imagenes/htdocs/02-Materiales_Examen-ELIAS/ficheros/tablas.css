@@ -1,0 +1,139 @@
+/*************************** MONITOR  GRANDE ***********************************/
+/*************************** MONITOR  GRANDE ***********************************/
+/*************************** MONITOR  GRANDE ***********************************/
+/*************************** MONITOR  GRANDE ***********************************/
+
+#ficherossubidos table 
+{
+	border:0px solid red;
+	width:80%;
+	border-collapse:separate;
+	border-spacing:5px 5px;
+}
+
+#ficherossubidos table td
+{
+	padding:10px;
+	border-radius:6px;
+	
+	font-family: calibri;
+	font-size: 17px;	
+}
+
+#ficherossubidos table td:nth-child(1)
+{
+	width:10%;
+	text-align:center;
+	background-color:HotPink;
+	color:white;
+}
+
+#ficherossubidos table td:nth-child(2)
+{
+	width:40%;
+	text-align:center;
+	background-color:LightSteelBlue;
+	color:navy;
+}
+
+#ficherossubidos table td:nth-child(3)
+{
+	width:40%;
+	text-align:center;
+	background-color:PaleGreen;
+	color:navy;
+}
+
+#ficherossubidos table td:nth-child(4)
+{
+	width:10%;
+	text-align:center;
+	background-color:orange;
+	color:navy;
+}
+
+#papelera
+{
+	cursor:pointer;
+	width:40px;
+	height:40px;
+	vertical-align:middle;
+}
+/**************************** TAMAÑO TABLET ************************************/
+/**************************** TAMAÑO TABLET ************************************/
+/**************************** TAMAÑO TABLET ************************************/
+/**************************** TAMAÑO TABLET ************************************/
+@media (max-width: 1000px)
+{
+	#ficherossubidos table
+	{
+		width:100%;
+	}
+	
+	#ficherossubidos table td
+	{
+		font-size: 13px;	
+	}	
+	
+}	
+/**************************** TAMAÑO MÓVIL ************************************/
+/**************************** TAMAÑO MÓVIL ************************************/
+/**************************** TAMAÑO MÓVIL ************************************/
+/**************************** TAMAÑO MÓVIL ************************************/
+@media (max-width: 768px)
+{
+
+	#ficherossubidos table tr
+	{ 
+		display: flex; 
+		flex-direction: row;
+		flex-wrap: wrap;
+
+		justify-content: center;
+		align-items: center;
+
+		/* espacio entre registro y registro */
+		margin: 0px 0px 5px 0px;
+  }
+  
+  #ficherossubidos table td  
+  {
+		flex: 1 1 150px;
+		align-self: stretch;
+		font-size: 12px;	
+		align-items:center;
+		justify-content: center;
+		padding:7px; 
+  }
+
+  #ficherossubidos table td:nth-child(1)
+  {
+		flex:1;
+		text-align:center;
+  }
+
+  #ficherossubidos table td:nth-child(2)
+  {
+		flex:3;
+		text-align:center;
+  }
+
+  #ficherossubidos table td:nth-child(3)
+  {
+		flex:3;
+		text-align:center;
+  }
+
+  #ficherossubidos table td:nth-child(4)
+  {
+		flex:1;
+		text-align:center;
+  }  
+  
+  #papelera
+  {
+	width:20px;
+	height:20px;
+  }  
+}
+

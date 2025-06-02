@@ -1,0 +1,1 @@
+<i class="fas fa-plane-departure me-2" style="font-size: 3em;"></i>
