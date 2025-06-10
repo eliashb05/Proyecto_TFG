@@ -90,11 +90,11 @@
                 <input type="date" class="form-control" id="fecha_salida" name="fecha_salida" value="{{ old('fecha_salida') }}" required>
             </div>
             <div class="col-md-2">
-                <label for="huespedes" class="form-label">Huéspedes</label>
-                <select class="form-select" id="huespedes" name="huespedes" required>
+                <label for="habitaciones" class="form-label">Habitaciones</label>
+                <select class="form-select" id="habitaciones" name="habitaciones" required>
                     <option value="" selected disabled>Seleccionar</option>
                     @for ($i = 1; $i <= 5; $i++)
-                        <option value="{{ $i }}">{{ $i }} huésped{{ $i > 1 ? 'es' : '' }}</option>
+                        <option value="{{ $i }}">{{ $i }} Habitación{{ $i > 1 ? 'es' : '' }}</option>
                     @endfor
                 </select>
             </div>

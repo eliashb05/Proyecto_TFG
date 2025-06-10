@@ -39,7 +39,7 @@ public function buscar(Request $request)
         'destino' => 'required|string|max:255',
         'fecha_entrada' => 'required|date|before_or_equal:fecha_salida|after_or_equal:today',
         'fecha_salida' => 'required|date|after_or_equal:fecha_entrada',
-        'huespedes' => 'required|integer|min:1',
+        'habitaciones' => 'required|integer|min:1',
     ],[
         'fecha_entrada.before_or_equal' => 'La fecha de entrada debe ser igual o anterior a la fecha de salida.',
         'fecha_entrada.after_or_equal' => 'La fecha de entrada debe ser igual o posterior a hoy.',
