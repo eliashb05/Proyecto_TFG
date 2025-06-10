@@ -39,7 +39,9 @@ class AuthenticatedSessionController extends Controller
             ]);
         }
 
+        
         return redirect()->intended(route('dashboard', absolute: false));
+
     }
 
     /**

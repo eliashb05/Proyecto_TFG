@@ -94,7 +94,6 @@ public function store(Request $request)
         'total_pagar' => $totalPagar,
         'estado' => 'Pendiente',
     ]);
-    //Elimina las habitaciones reservadas del hote
     
      // Redirigir o retornar una respuesta
      return redirect()->route('reservas.index')->with('success', 'Reserva realizada con éxito');

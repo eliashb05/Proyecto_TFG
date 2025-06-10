@@ -32,6 +32,8 @@ class AuthenticatedSessionController extends Controller
         // con un mensaje de error. Si son correctas, el usuario es autenticado y se crea una sesión.        
         $request->authenticate();
 
+
+
         // regenera el ID de la sesión del usuario después de que se haya autenticado correctamente.
         // Razón para hacerlo: Después de la autenticación, regenerar el ID de la sesión es una medida
         // de seguridad para prevenir ataques de fijación de sesión (session fixation).        

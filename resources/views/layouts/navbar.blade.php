@@ -2,7 +2,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm fixed-top">
     <div class="container-fluid px-4">
         <a class="navbar-brand fw-bold fs-4 d-flex align-items-center" href="{{ route('index') }}">
-            <i class="fas fa-plane-departure me-2"></i>
             HotelesHB
         </a>
         <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
